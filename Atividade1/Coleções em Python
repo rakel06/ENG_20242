@@ -1,0 +1,105 @@
+1) Crie uma tupla chamada cidades que contenha os nomes de cinco cidades. Imprima a terceira cidade.
+
+cidades = ("São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre", "Curitiba")
+
+print(cidades[2])
+
+_______________________________________________________________________________________________________
+
+2) Crie uma tupla chamada numeros com os seguintes valores: (1, 2, 3, 1, 4, 1). Utilize o método 
+count() para contar quantas vezes o número 1 aparece na tupla.
+
+numeros = (1, 2, 3, 1, 4, 1)
+
+print(numeros.count(1))
+
+_______________________________________________________________________________________________________
+
+3) Crie uma tupla chamada animais com os seguintes valores: ('cachorro', 'gato', 'pássaro'). 
+Verifique se 'gato' está na tupla e imprima uma mensagem informando o resultado.
+
+animais = ('cachorro', 'gato', 'pássaro')
+
+print('gato' in animais)
+
+_______________________________________________________________________________________________________
+
+4) Dada a tupla meses = ('janeiro', 'fevereiro', 'março', 'abril', 'maio'), encontre e imprima o índice 
+o mês 'abril'.
+
+meses = ('janeiro', 'fevereiro', 'março', 'abril', 'maio')
+
+print(meses.index('abril'))
+
+_______________________________________________________________________________________________________
+
+5) Crie uma tupla chamada coordenadas que armazene a latitude e longitude de um local 
+(ex: (-23.5505, -46.6333)). Imprima a latitude e a longitude separadamente.
+
+coordenadas = (-23.5505, -46.6333)
+
+print(coordenadas[0])
+print(coordenadas[1])
+
+_______________________________________________________________________________________________________
+
+6) Crie um dicionário chamado carro com as chaves marca, modelo e ano. Atribua valores de sua 
+escolha e imprima o modelo do carro.
+
+carro = {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "ano": 2022
+}
+
+print(carro["modelo"])
+
+_______________________________________________________________________________________________________
+
+7) Use o dicionário carro que você criou no exercício anterior. Adicione uma nova chave chamada cor 
+e atribua uma cor ao carro. Em seguida, imprima o dicionário completo.
+
+carro = {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "ano": 2022
+}
+
+carro["cor"] = "Preto"
+
+print(carro)
+
+_______________________________________________________________________________________________________
+
+8) Dado o dicionário pessoa = {'nome': 'João', 'idade': 30, 'cidade': 'São Paulo'}, remova a 
+chave idade e imprima o dicionário resultante.
+
+pessoa = {'nome': 'João', 'idade': 30, 'cidade': 'São Paulo'}
+
+del pessoa['idade']
+
+print(pessoa)
+
+_______________________________________________________________________________________________________
+
+9) Crie um dicionário chamado produto que contenha nome, preco e quantidade. Use
+um loop for para imprimir todos os pares chave/valor.
+
+produto = {
+    "nome": "Camiseta",
+    "preco": 29.99,
+    "quantidade": 50
+}
+
+for chave, valor in produto.items():
+    print(f"{chave}: {valor}")
+
+_______________________________________________________________________________________________________
+
+10) Dado o dicionário estudante = {'nome': 'Maria', 'curso': 'Biologia', 'ano': 2}, verifique
+se a chave curso existe. Se existir, imprima "A estudante está no curso de Biologia."
+
+estudante = {'nome': 'Maria', 'curso': 'Biologia', 'ano': 2}
+
+if 'curso' in estudante:
+    print("A estudante está no curso de Biologia.")
