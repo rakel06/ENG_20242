@@ -1,0 +1,278 @@
+1) Crie uma lista contendo cinco números inteiros de sua escolha. Em seguida, percorra essa lista 
+e imprima o valor de cada elemento multiplicado por 2. O resultado deve mostrar o novo valor 
+de cada elemento, um por vez.
+
+lista = [1, 2, 3, 4, 5]
+
+for numero in lista:
+    resultado = numero * 2
+    print(resultado)
+_______________________________________________________________________________________________________
+
+2) Dada a lista ["maçã", "banana", "laranja", "uva"], remova o item "banana" da lista e adicione 
+a fruta "melancia" no lugar. Depois, mostre a nova lista atualizada com as alterações feitas.
+
+frutas = ["maçã", "banana", "laranja", "uva"]
+
+frutas[frutas.index("banana")] = "melancia"
+
+print(frutas)
+_______________________________________________________________________________________________________
+
+3) Escreva um programa que receba uma lista de números inteiros e exiba qual é o maior número e qual é
+o menor número presente na lista. Certifique-se de mostrar ambos os valores ao final.
+
+lista = [1, 2, 3, 4, 5]
+
+maior = max(lista)
+menor = min(lista)
+
+print(f"O maior número é {maior} e o menor número é {menor}")
+_______________________________________________________________________________________________________
+
+4) Crie uma função que receba uma lista contendo várias palavras (strings). A função deve devolver uma
+nova lista que contenha a quantidade de letras de cada palavra da lista original. Exiba essa nova lista 
+com o número de letras correspondente a cada palavra.
+
+def contar_letras(lista_palavras):
+    nova_lista = []
+    for palavra in lista_palavras:
+        nova_lista.append(len(palavra))
+    return nova_lista
+
+#Exemplo de uso
+
+lista_de_palavras = ["python", "programação", "rakel", "função"]
+resultado = contar_letras(lista_de_palavras)
+
+print(resultado)
+_______________________________________________________________________________________________________
+
+5) Dada uma lista de números inteiros que você vai definir, ordene essa lista em ordem crescente e 
+depois exiba o resultado da lista ordenada.
+
+lista = [30, 20, 10, 5, 1]
+
+lista.sort()
+
+print(lista)
+_______________________________________________________________________________________________________
+
+6) Crie uma tupla que contenha os números de 1 a 5. Tente alterar o valor do segundo elemento dessa 
+tupla e observe o que acontece. No final, explique por que você conseguiu ou não modificar o valor.
+
+tupla = (1, 2, 3, 4, 5)
+
+# Tentativa de alterar o segundo elemento
+tupla[1] = 10  # Isso gerará um erro
+
+print(tupla)
+
+#Tuplas são estruturas de dados em Python que são imutáveis, o que significa que, uma vez que são 
+criadas, seus elementos NÃO podem ser alterados.
+_______________________________________________________________________________________________________
+
+7) Escreva um programa que receba uma tupla contendo diversos números inteiros. O programa deve calcular
+exibir a soma de todos os números presentes na tupla.
+
+tupla = (1, 2, 3, 4, 5, 6, 7)
+
+soma = sum(tupla)
+
+print(soma)
+_______________________________________________________________________________________________________
+
+8) Dada uma tupla que contém cinco números, crie uma função que retorne o primeiro e o último número 
+dessa tupla. O programa deve imprimir ambos os valores corretamente.
+
+tupla = (1, 2, 3, 4, 5)
+
+def primeiro_e_ultimo(tupla):
+    return tupla[0], tupla[-1]
+
+print(f"Primeiro: {primeiro}, Último: {ultimo}")
+_________________________________________________________________________________________________
+
+9) Converta a lista ["a", "b", "c", "d"] em uma tupla e, em seguida, exiba o tipo do novo 
+objeto que foi criado. O programa deve deixar claro que o tipo mudou de lista para tupla.
+
+lista = ["a", "b", "c", "d"]
+
+tupla = tuple(lista)
+
+print(type(tupla))
+_______________________________________________________________________________________________________
+
+10) Crie uma tupla com três números inteiros e uma string. Depois, verifique se o número 3 está 
+presente nessa tupla e mostre uma mensagem dizendo se o número foi encontrado ou não.
+
+tupla = (1, 2, 3, "Rakel")
+
+if 3 in tupla:
+    print("O número 3 foi encontrado na tupla.")
+else:
+    print("O número 3 não foi encontrado na tupla.")
+_______________________________________________________________________________________________________
+
+11) Crie dois sets: set1 = {1, 2, 3, 4} e set2 = {3, 4, 5, 6}. Exiba a união dos dois sets 
+(todos os elementos sem repetição), a interseção (elementos que aparecem nos dois sets) e a diferença 
+(elementos presentes no primeiro set, mas não no segundo). Mostre os resultados de cada operação.
+
+set1 = {1, 2, 3, 4}
+
+set2 = {3, 4, 5, 6}
+
+uniao = set1.union(set2)
+
+intersecao = set1.intersection(set2)
+
+diferenca = set1.difference(set2)
+
+print(uniao)
+print(intersecao)
+print(diferenca)
+_______________________________________________________________________________________________________
+
+12) Dada a lista [1, 2, 2, 3, 4, 4, 5], remova os elementos duplicados transformando a lista em um set. 
+Ao final, exiba o set resultante, que deve conter apenas valores únicos.
+
+lista = [1, 2, 2, 3, 4, 4, 5]
+
+set_sem_duplicatas = set(lista)
+
+print(set_sem_duplicatas)
+_______________________________________________________________________________________________________
+
+13) Crie um set contendo os valores {5, 10, 15, 20}. Adicione o número 25 a esse set 
+e depois remova o valor 15. Mostre o set após cada alteração.
+
+meu_set = {5, 10, 15, 20}
+print("Set inicial:", meu_set)
+
+meu_set.add(25)
+print("Após adicionar 25:", meu_set)
+
+meu_set.remove(15)
+print("Após remover 15:", meu_set)
+_______________________________________________________________________________________________________
+
+14) Verifique se o número 7 está presente no set {1, 2, 3, 4, 5}. O programa deve exibir uma
+mensagem informando se o número foi encontrado ou não no set.
+
+set = {1, 2, 3, 4, 5}
+
+if 7 in set:
+    print("O número 7 está presente no set.")
+else:
+    print("O número 7 não está presente no set.")
+_______________________________________________________________________________________________________
+
+15) Crie um set vazio e adicione vários valores a ele usando um laço de repetição
+(por exemplo, um for ou while). No final, mostre todos os valores armazenados no set.
+
+meu_set = set()
+
+for i in range(5):
+    meu_set.add(i)
+
+print(meu_set)
+_______________________________________________________________________________________________________
+
+16) Crie um dicionário com os pares chave-valor 'nome': 'Ana', 'idade': 22, 'curso': 'Engenharia'. 
+Adicione uma nova chave 'universidade': 'USP' ao dicionário. Em seguida, exiba o dicionário 
+completo com todas as informações.
+
+dicionario = {
+    'nome': 'Ana',
+    'idade': 22,
+    'curso': 'Engenharia'
+}
+
+dicionario['universidade'] = 'USP'
+
+print(dicionario)
+_______________________________________________________________________________________________________
+
+17) Escreva um programa que percorra um dicionário com várias chaves e valores. Para cada par, imprima 
+a chave e o valor no formato: Chave: X, Valor: Y. O dicionário pode conter qualquer informação 
+que você preferir.
+
+dicionario = {
+    'Nome': 'Rakel',
+    'idade': 21,
+    'Curso': 'Sistemas de Informação',
+    'Universidade': 'UVV',
+    'Data de Nascimento': '23/06/2003',
+    'Naturalidade': 'Vitória',
+    'Estado Civil': 'Quase noiva',
+    'Hobbie': 'Assistir séries'
+}
+
+for chave, valor in dicionario.items():
+    print(f"Chave: {chave}, Valor: {valor}")
+_______________________________________________________________________________________________________
+
+18) Crie um dicionário que relacione nomes de alunos às suas notas. Depois, crie uma função que calcule
+e exiba a média das notas desses alunos com base nas informações do dicionário.
+
+dicionario = {
+    'Ana': 5,
+    'João': 7,
+    'Luisa': 9,
+    'Vitor': 10,
+    'Maria' : 6
+}
+
+def calcular_media(dicionario):
+    soma_notas = sum(dicionario.values())
+    media = soma_notas / len(dicionario)
+    return media
+
+media_notas = calcular_media(dicionario)
+
+print(f"A média das notas dos alunos é: {media_notas}")
+_______________________________________________________________________________________________________
+
+19) Escreva um programa que permita ao usuário buscar o valor de uma chave específica em um dicionário. 
+Caso a chave não exista, o programa deve exibir uma mensagem dizendo que a chave não foi encontrada. 
+Teste o programa com diferentes chaves.
+
+dicionariozinho = {
+    "Nome": "Vitor",
+    "Idade": "20",
+    "Hobbie": "Programar",
+    "Estado Civil": "Gostando de alguém",
+    "Residência": "Coqueiral",
+    "Religião": "Católica"
+}
+
+buscar = input("Pesquise uma chave: ")
+
+if buscar in dicionariozinho:
+    print(f"A chave '{buscar}' foi encontrada e seu valor é: {dicionariozinho[buscar]}")
+else:
+    print(f"A chave '{buscar}' não foi encontrada no dicionário.")
+_______________________________________________________________________________________________________
+20) Dado um dicionário que contém produtos e seus respectivos preços, como 
+{'pão': 2.50, 'leite': 3.00, 'café': 4.50}, permita que o usuário altere o preço de um dos produtos 
+e exiba o dicionário atualizado com o novo valor.
+
+produtos = {
+    'açai': 15.00, 
+    'churrasquinho': 10.50, 
+    'batata frita': 12.50,
+    'coxinha': 8.00
+            }
+
+alterar = input("Digite o nome do produto que deseja alterar o preço: ")
+preco = input("Agora digite o novo valor do produto: ")
+
+if alterar in produtos:
+    produtos[alterar] = preco
+    print(f"O preço do produto {alterar} foi atualizado para {preco}.")
+else:
+    print(f"O produto {alterar} não foi encontrado no dicionário.")
+
+
+
+
