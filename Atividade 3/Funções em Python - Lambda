@@ -1,0 +1,280 @@
+1) Dada uma lista de números inteiros, use uma função lambda para retornar uma lista com o quadrado 
+de cada número.
+
+lista = [1,2, 3, 4, 5]
+quadrado = list(map(lambda x: x**2, lista))
+print(quadrado)
+_______________________________________________________________________________________________________
+
+2) Dada uma lista de temperaturas em Celsius, use uma função lambda para convertê-las em Fahrenheit.
+
+lista = [10, 20, 30, 40]
+fahrenheit = list(map(lambda x: (x * 1.8) + 32, lista))
+print(fahrenheit)
+______________________________________________________________________________________________________
+
+3) Dada uma lista de palavras, use uma função lambda para retornar uma lista com o comprimento de 
+cada palavra.
+
+lista = ['Carro', 'Mesa', 'Paralelepipedo', 'Calçada']
+
+comp = list(map(lambda palavra: len(palavra), lista))
+
+print(comp)
+_______________________________________________________________________________________________________
+
+4) Use uma função lambda para dobrar os valores de uma lista de inteiros.
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+dobrar = list(map(lambda x: x * 2, lista))
+
+print(dobrar)
+_______________________________________________________________________________________________________
+
+5) Dada uma lista de nomes, use uma função lambda para adicionar o prefixo "Sr./Sra." antes de
+cada nome.
+
+lista = ['Ana', 'Josefina', 'Louis', 'Richard']
+prefixo = list(map(lambda nome: "Sra. " + nome if nome.endswith('a') else "Sr. " + nome, lista))
+print(prefixo)
+_______________________________________________________________________________________________________
+
+6) Dada uma lista de números, use uma função lambda para retornar apenas os números pares.
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+pares = list(filter(lambda x: x % 2 == 0, lista))
+print(pares)
+_______________________________________________________________________________________________________
+
+7) Dada uma lista de palavras, use uma função lambda para retornar apenas as palavras com menos
+de 5 caracteres.
+
+lista = ['Ana', 'Josefina', 'Louis', 'Richard']
+palavra = list(filter(lambda x: len(x) < 5, lista))
+print(palavra)
+_______________________________________________________________________________________________________
+
+8) Dada uma lista de idades, use uma função lambda para retornar apenas as idades maiores que 18.
+
+lista = [5, 12, 15, 17, 29, 40, 62, 73]
+idade = list(filter(lambda x: x > 18, lista))
+
+print(idade)
+_________________________________________________________________________________________________
+
+9) Dada uma lista de strings, use uma função lambda para retornar as strings que começam com 
+a letra "a".
+
+lista = ['Ana', 'Josefina', 'Louis', 'Richard', 'Amélia']
+letra = list(filter(lambda x: x.startswith('A'), lista))
+print(letra)
+_______________________________________________________________________________________________________
+
+10) Dada uma lista de números inteiros, use uma função lambda para retornar apenas os números 
+positivos.
+
+lista = [-1, -3, -5, -7, 1, 2, 3, 4, 5]
+positivos = list(filter(lambda x: x > 0, lista ))
+
+print(positivos)
+_______________________________________________________________________________________________________
+
+11) Use uma função lambda para calcular a soma de uma lista de números.
+
+from functools import reduce
+
+lista = [1, 2, 3, 4]
+
+soma = reduce(lambda x, y: x + y, lista)
+
+print(soma)
+_______________________________________________________________________________________________________
+
+12) Use uma função lambda para multiplicar todos os elementos de uma lista.
+
+from functools import reduce
+
+lista = [1, 2, 3, 4]
+
+mult = reduce(lambda x, y: x * y, lista)
+
+print(mult)
+______________________________________________________________________________________________________
+
+13) Use uma função lambda para encontrar o maior número em uma lista.
+
+from functools import reduce
+
+lista = [5, 12, 15, 17, 94, 40, 62, 73]
+
+maior = reduce(lambda x,y: x if x>=y else y,lista)
+
+print(maior)
+_______________________________________________________________________________________________________
+
+14) Use uma função lambda para concatenar uma lista de palavras em uma única string separada por 
+espaços.
+
+from functools import reduce
+
+lista = ['Olá', 'meu', 'nome', 'é', 'Rakel']
+
+concatenar = reduce(lambda x, y: x + ' ' + y, lista)
+
+print(concatenar)
+_______________________________________________________________________________________________________
+
+15) Use uma função lambda para somar os dígitos de uma lista de inteiros, onde cada número é tratado 
+individualmente.
+
+lista = [123, 321]
+
+resultado = sum(map(lambda x: sum(int(digit) for digit in str(x)), lista))
+
+print(resultado)
+_______________________________________________________________________________________________________
+
+16) Use uma função lambda para dobrar os números de uma lista e retornar apenas os números que são 
+maiores que 20.
+
+lista = [5, 6, 10, 11, 12, 15, 17, 94, 40, 62, 73]
+
+resultado = filter(lambda x: x > 20, map(lambda x: x * 2, lista))
+
+
+resultado = list(resultado)
+print(resultado)
+_______________________________________________________________________________________________________
+
+17) Dada uma lista de palavras, use uma função lambda para encontrar todas as palavras que contêm a 
+letra "e" e conte quantas são.
+
+palavras = ["amor", "formiga", "helena", "feliz", "sistemas", "homem", "Deus"]
+
+palavras_com_e = list(filter(lambda palavra: 'e' in palavra, palavras))
+
+quantidade = len(palavras_com_e)
+
+print(f'Palavras com "e": {palavras_com_e}')
+print(f'Quantidade de palavras com "e": {quantidade}')
+_______________________________________________________________________________________________________
+
+18) Converta uma lista de temperaturas de Fahrenheit para Celsius usando uma função lambda e, em
+seguida, retorne apenas as temperaturas abaixo de 20°C.
+
+lista = [40, 41, 42, 35, 38, 45, 180, 80]
+
+celsius = list(filter(lambda x: x < 20, map(lambda x: (x - 32) * 5/9, lista)))
+
+print(celsius)
+_________________________________________________________________________________________________
+
+19) Use uma função lambda para selecionar apenas os números pares de uma lista e, em seguida, 
+somar esses números.
+
+lista = [10, 15, 20, 25, 30, 35, 40, 45]
+
+soma_pares = sum(filter(lambda x: x % 2 == 0, lista))
+
+print(soma_pares)
+_______________________________________________________________________________________________________
+
+20) Use uma função lambda para substituir números negativos de uma lista por 0 e manter os positivos.
+
+# Lista de números
+lista = [-10, 15, -5, 20, -8, 30, -3]
+
+nova_lista = list(map(lambda x: x if x >= 0 else 0, lista))
+
+print(nova_lista)
+_______________________________________________________________________________________________________
+
+21) Use uma função lambda para retornar a lista de cubos de cada elemento em uma lista de números.
+
+lista = [2, 3, 4, 5]
+cubo = list(map(lambda x: x**3, lista))
+print(cubo)
+_______________________________________________________________________________________________________
+
+22) Use uma função lambda para verificar se um número dado é primo (retornando True ou False).
+
+eh_primo = lambda n: n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
+
+
+print(eh_primo(10)) 
+
+print(eh_primo(11)) 
+______________________________________________________________________________________________________
+
+23) Use uma função lambda para dividir cada elemento de uma lista por 5 e retornar a nova lista.
+
+lista = [5, 10, 15, 25, 35]
+
+dividir = list(map(lambda x: x/5, lista))
+print(dividir)
+_______________________________________________________________________________________________________
+
+24) Use uma função lambda para remover todas as vogais de uma string dada.
+
+remover_vogais = lambda y: ''.join(filter(lambda x: x not in 'aeiouAEIOU', y))
+
+resultado = remover_vogais("Rakel")
+print(resultado)
+_______________________________________________________________________________________________________
+
+25) Use uma função lambda para converter todas as palavras em uma lista para letras maiúsculas.
+
+lista = ['Caio', 'Pedro', 'Rakel', 'Vitor']
+
+maiusculas = list(map(lambda x: x.upper(), lista))
+
+print(maiusculas)
+_______________________________________________________________________________________________________
+
+26) Use uma função lambda para retornar apenas os números negativos de uma lista de inteiros.
+
+lista = [-10, 15, -5, 20, -8, 30, -3]
+
+negativos = list(filter(lambda x: x < 0, lista))
+
+print(negativos)
+_______________________________________________________________________________________________________
+
+27) Use uma função lambda para converter todos os números de uma lista para seus valores absolutos.
+
+lista = [-5, 10, -15, 25, -35]
+
+valores_absolutos = list(map(lambda x: abs(x), lista))
+
+print(valores_absolutos)
+_______________________________________________________________________________________________________
+
+28) Use uma função lambda para retornar uma lista com o resto da divisão de cada elemento por 3.
+
+lista = [5, 9, 12, 17, 21, 25, 30]
+
+resto = list(map(lambda x: x % 3, lista))
+print(resto)
+_________________________________________________________________________________________________
+
+29) Dada uma lista de números, use uma função lambda para multiplicar cada elemento pelo seu 
+índice.
+
+lista = [5, 10, 15, 20, 25]
+
+resultado = list(map(lambda x: x[0] * x[1], enumerate(lista)))
+
+print(resultado)
+_______________________________________________________________________________________________________
+
+30) Use uma função lambda para verificar se uma palavra dada é um palíndromo
+(retornando True ou False).
+
+palavra = "arara"
+
+verificar_palindromo = lambda x: x == x[::-1]
+
+resultado = verificar_palindromo(palavra)
+print(resultado)
+
