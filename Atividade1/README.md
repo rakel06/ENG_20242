@@ -1,7 +1,7 @@
 # Portfólio de Laboratório de Programação
 
 ## Atividade 1
-Exercícios referentes à Unidade VIII.
+Exercícios referentes à Unidade VII.
 
 Aluno(a): Rakel Freire da Silva
 
